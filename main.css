@@ -1,0 +1,57 @@
+.viewer {
+	position: relative;
+	display: block;
+}
+
+
+.viewer .img-selector {
+	display: none;
+	position: absolute;
+
+	height: 60px;
+	width: 70px;
+	top: 10px;
+	left: 10px;
+
+	background-color: #fff;
+	border: 1px solid black;
+}
+
+.viewer .img-selector .img-selector-btn {
+	display: block;
+	width: 70px;
+	height: 20px;
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.tooltip-template{
+	display: block;
+	max-width: 400px;
+	height: auto;
+}
+
+.h3 { font-size: 16px; margin-bottom: 10px;}
+.content { font-size: 12px;}
+
+.items { padding: 3px;}
+.item { 
+	list-style: none;
+	display: inline-block;
+	padding: 5px;
+	vertical-align: top;
+	}
+.item-descriptions {
+	display: inline-block;
+	width: 120px;
+}
+.item-img {
+	vertical-align: top;
+	width: 60px;
+}
+.item-title {
+	font-size: 11px;
+	font-weight: bold;
+}
+.red { color: red;}
+.price { font-size: 16px;}

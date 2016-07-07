@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ImageMap Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link href="main.css" rel="stylesheet">
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="lib/jquery.rwdImageMaps.min.js"></script>
+    <script src="lib/jquery.popupoverlay.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="viewer">
+                <img class="img1 img-responsive usemap-responsive" 
+                     usemap="#imgmap1" src="img/House.png">					 
+                <img class="img2 img-responsive usemap-responsive" 
+                     usemap="#imgmap2" src="img/House.png">
+                <div class="img-selector">
+                    <a href="#" class="selImg1 img-selector-btn">1</a>
+                    <a href="#" class="selImg2 img-selector-btn">2</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="tooltip" class="well">
+    <div class="tooltip-template">[[TITLE]]</div>
+    <p>Some more</p>
+</div>
+
+<map name="imgmap1">
+	<area shape="circle" alt="" title="circle" template="<div class='h3'>FUNKALARMANLAGEN</div><p class='content'>Besonders System-Funkalarmanlagen wie die von ABUS Security und LUPUS Electronics schützen Sie vor Einbruch und Diebstahl.</p><br><ul class='items'><li class='item'><img class='item-img' src='img/Secvest.png' /><div class='item-descriptions'><p class='item-title'>ABUS Secvest </p><p class=''>Funkalarmanlage FUAA50000</p><p class='price red'>569,00EU*</p><a class='red' href='#'> >> zum Artikel</a></div></li><li class='item'><img class='item-img' src='img/Secvest.png' /><div class='item-descriptions'><p class='item-title'>LUPUSEC - 12045 - XT2 Plus </p><p class=''>Funk-Alarmzentrale</p><p class='price red'>668,95EU*</p><a class='red' href='#'> >> zum Artikel</a></div></li></ul>" coords="255,265,40" href="#" target="" />
+	<area shape="rect" alt="" title="rect" template="<div class='tooltip-content'>click to see the second floor!</div>" coords="655,520,800,570" href="#" target="" onclick='showImage(Window.image2);' />
+	<area shape="rect" alt="" title="rect" template="<div class='tooltip-content'>click to see the first floor!</div>" coords="655,580,800,630" href="#" target="" onclick='showImage(Window.image1);'/>
+</map>
+
+<map name="imgmap2">
+	<area shape="rect" alt="" title="rect" template="<div class='tooltip-content'>Click here to show you the first floor!</div>" coords="655,580,800,630" href="#" target="" onclick='showImage(Window.image1);'/>
+</map>
+
+</body>
+</html>
